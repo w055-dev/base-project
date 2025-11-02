@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная - Портфолио</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style/styles.css">
+    </head>
+    <body class="bg-light">
+        <div class="container-fluid p-0">
+            <header class="bg-primary text-white py-4">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img src="" alt="Логотип" class="me-3" style="height: 40px;">
+                        </div>
+                        <div class="col">
+                            <h1 class="h3 mb-1">Колдаев Тимур Саврович</h1>
+                            <p class="mb-0 opacity-75">Студент разработчик</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">
+                                    <i class="bi bi-house me-1"></i>Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projects.html">
+                                    <i class="bi bi-folder me-1"></i>Проекты
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="diary.html">
+                                    <i class="bi bi-journal me-1"></i>Дневник
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contacts.html">
+                                    <i class="bi bi-telephone me-1"></i>Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="container my-4">
+                <div class="row mb-4">
+                    <div class="col">
+                        <h1 class="h2 mb-3">Свяжитесь со мной</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <form id="contactForm">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Имя</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Введите ваш email" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Сообщение</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
+                                    </div>
+                                    
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="bi bi-send me-2"></i>Отправить сообщение
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Контакты</h5>
+                                <div class="contact-info">
+                                    <p><strong>Email:</strong> student@mail.ru</p>
+                                    <p><strong>GitHub:</strong> username</p>
+                                    <p><strong>Местоположение:</strong> Город, Страна</p>
+                                    <p><strong>Телефон:</strong> +7 (999) 999-99-99</p>
+                                </div>
+                                <hr class="my-4">
+                                <h6 class="mb-3">Социальные сети</h6>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-telegram"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-dark text-white py-4 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="contacts.html" class="text-white text-decoration-none">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+                console.log('Данные формы:', formData);
+                showNotification('Сообщение успешно отправлено!', 'success');
+                contactForm.reset();
+            });
+            function showNotification(message, type) {
+                const notification = document.createElement('div');
+                notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show`;
+                notification.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                contactForm.parentNode.insertBefore(notification, contactForm);
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 5000);
+            }
+        });
+        </script>
+    </body>
+</html>
