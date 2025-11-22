@@ -2,19 +2,20 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>Главная</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style/styles.css">
     </head>
     <body class="page">
+        <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
         <div class="page__container">
             <header class="header">
                 <div class="container header__container"> 
-                    <img src="images/logo.png" alt="Логотип" class="header__logo">
+                    <img src="images/logo.webp" alt="Логотип" class="header__logo">
                     <div class="header__content">
-                        <h1 class="header__title">Колдаев Тимур Саврович</h1>
+                        <h1 class="header__title">КТС</h1>
                         <p class="header__subtitle">Студент разработчик</p>
                     </div>
                 </div>
@@ -46,7 +47,37 @@
                 </div>
             </nav>
             <main class="main">
-                <div class="container main__container">
+                <section class="hero hero--bleed" aria-labelledby="hero-title">
+                    <div class="container hero__container">
+                        <div class="hero__content">
+                            <h1 id="hero-title" class="hero__greeting">Привет! Я студент-разработчик</h1>
+                            <p class="hero__description">
+                                Увлекаюсь веб-разработкой и изучаю современные технологии.
+                                Шаг за шагом приближаюсь к своей мечте стать профессиональным разработчиком.
+                            </p>
+                            <a href="#main-content" class="btn btn--primary hero__button">
+                                <i class="bi bi-person hero__button-icon" aria-hidden="true"></i>Узнать больше
+                            </a>
+                        </div>
+                         <figure class="hero__image">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="images/photo-200.webp 200w, images/photo-400.webp 400w"
+                                    sizes="(max-width: 768px) 200px, 400px">
+                                <img
+                                    class="hero__photo"
+                                    src="images/photo-200.png" 
+                                    srcset="images/photo-200.png 200w, images/photo-400.png 400w" 
+                                    alt="Фото студента" 
+                                    sizes="(max-width: 768px) 200px, 400px"
+                                    loading="lazy"
+                                >
+                            </picture>
+                        </figure>
+                    </div>
+                </section>
+                <div class="container main__container" id="main-content">
                     <div class="page-header">
                         <h1 class="page-header__title">Главная страница</h1>
                     </div>
@@ -54,11 +85,24 @@
                         <div class="card profile-card">
                             <div class="card__body">
                                 <div class="profile">
-                                    <div class="profile__photo">
-                                        <img src="images/photo.png" alt="Фото студента" class="profile__image">
-                                    </div>
+                                   <figure class="hero__image">
+                                        <picture>
+                                            <source
+                                                type="image/webp"
+                                                srcset="images/photo-200.webp 200w, images/photo-400.webp 400w"
+                                                sizes="(max-width: 768px) 150px, 200px">
+                                            <img
+                                                class="hero__photo"
+                                                src="images/photo-200.png" 
+                                                srcset="images/photo-200.png 200w, images/photo-400.png 400w" 
+                                                alt="Фото студента" 
+                                                sizes="(max-width: 768px) 200px, 400px"
+                                                loading="lazy"
+                                            >
+                                        </picture>
+                                    </figure>
                                     <div class="profile__content">
-                                        <h2 class="profile__title">Привет! Я студент группы ЭФБО-02-24</h2>
+                                        <h2 class="profile__title">Привет! Я студент группы</h2>
                                         <p class="profile__description">
                                             Увлекаюсь веб-разработкой и изучаю современные технологии.
                                             Шаг за шагом приближаюсь к своей мечте.
@@ -124,7 +168,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="content-section">
+                    <section class="content-section" id="about">
                         <div class="card">
                             <div class="card__header">
                                 <h2 class="card__title">
@@ -133,7 +177,7 @@
                             </div>
                             <div class="card__body">
                                 <div class="projects-grid">
-                                    <div class="project-card">
+                                    <article class="project-card">
                                         <div class="project-card__image-container">
                                             <img src="images/project1.jpg" alt="Личный сайт" class="project-card__image">
                                         </div>
@@ -146,8 +190,8 @@
                                                 <span class="project-card__tag" style="background: var(--color-stylish);">Bootstrap</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="project-card">
+                                    </article>
+                                    <article class="project-card">
                                         <div class="project-card__image-container">
                                             <img src="images/project2.jpg" alt="Todo приложение" class="project-card__image">
                                         </div>
@@ -159,8 +203,8 @@
                                                 <span class="project-card__tag" style="background: var(--color-warning);">LocalStorage</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="project-card">
+                                    </article>
+                                    <article class="project-card">
                                         <div class="project-card__image-container">
                                             <img src="images/project3.jpg" alt="Интернет-магазин" class="project-card__image">
                                         </div>
@@ -172,7 +216,7 @@
                                                 <span class="project-card__tag" style="background: var(--color-info);">API</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
