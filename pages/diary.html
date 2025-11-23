@@ -15,32 +15,32 @@
                 <div class="container header__container">
                     <img src="../images/logo.png" alt="Логотип" class="header__logo">
                     <div class="header__content">
-                        <h1 class="header__title"></h1>
+                        <p class="header__title">Колдаев Тимур Саврович</p>
                         <p class="header__subtitle">Студент разработчик</p>
                     </div>
                 </div>
             </header>
-            <nav class="nav">
+            <nav class="nav" aria-label="Основная навигация">
                 <div class="container nav__container">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a class="nav__link" href="../index.html">
-                                <i class="bi bi-house nav__icon"></i>Главная
+                                <i class="bi bi-house nav__icon" aria-hidden="true"></i>Главная
                             </a>
                         </li>
                          <li class="nav__item">
                             <a class="nav__link" href="projects.html">
-                                <i class="bi bi-folder nav__icon"></i>Проекты
+                                <i class="bi bi-folder nav__icon" aria-hidden="true"></i>Проекты
                             </a>
                         </li>
                          <li class="nav__item">
-                            <a class="nav__link nav__link--active" href="diary.html">
-                                <i class="bi bi-journal nav__icon"></i>Дневник
+                            <a class="nav__link nav__link--active" href="diary.html" aria-current="page">
+                                <i class="bi bi-journal nav__icon" aria-hidden="true"></i>Дневник
                             </a>
                         </li>
                          <li class="nav__item">
                             <a class="nav__link" href="contacts.html">
-                                <i class="bi bi-telephone nav__icon"></i>Контакты
+                                <i class="bi bi-telephone nav__icon" aria-hidden="true"></i>Контакты
                             </a>
                         </li>
                     </ul>
@@ -48,23 +48,23 @@
             </nav>
             <main class="main" id="main-content">
                 <div class="container main__container">
-                    <div class="page__header">
+                    <div class="page-header">
                         <h1 class="page-header__title">Мой учебный прогресс</h1>
                     </div>
                     <div class="content-grid">
                         <div class="content-grid__left">
                             <div class="card">
                                 <div class="card__header">
-                                    <h5 class="card__title">История обучения</h5>
+                                    <h2 class="card__title">История обучения</h2>
                                 </div>
                                 <div class="card__body">
-                                    <div class="timeline">
+                                    <div class="timeline" aria-live="polite" aria-atomic="true">
                                         <div class="timeline__item">
                                             <div class="timeline__badge timeline__badge--success">
                                                 <i class="bi bi-check-lg timeline__icon"></i>
                                             </div>
                                             <div class="timeline__content">
-                                                <h6 class="timeline__title">15 декабря - Верстка макета сайта</h6>
+                                                <h4 class="timeline__title">15 декабря - Верстка макета сайта</h4>
                                                 <p class="timeline__description">Завершил работу над адаптивной версткой макета портфолио</p>
                                             </div>
                                             <div class="timeline__status">
@@ -76,7 +76,7 @@
                                                 <i class="bi bi-check-lg timeline__icon"></i>
                                             </div>
                                             <div class="timeline__content">
-                                                <h6 class="timeline__title">10 декабря - JavaScript основы</h6>
+                                                <h4 class="timeline__title">10 декабря - JavaScript основы</h4>
                                                 <p class="timeline__description">Изучил основы JavaScript: переменные, функции, циклы</p>
                                             </div>
                                             <div class="timeline__status">
@@ -88,7 +88,7 @@
                                                 <i class="bi bi-arrow-clockwise timeline__icon"></i>
                                             </div>
                                             <div class="timeline__content">
-                                                <h6 class="timeline__title">5 декабря - Работа с формами</h6>
+                                                <h4 class="timeline__title">5 декабря - Работа с формами</h4>
                                                 <p class="timeline__description">Осваиваю валидацию форм и работу с пользовательским вводом</p>
                                             </div>
                                             <div class="timeline__status">
@@ -100,7 +100,7 @@
                                                 <i class="bi bi-arrow-clockwise timeline__icon"></i>
                                             </div>
                                             <div class="timeline__content">
-                                                <h6 class="timeline__title">1 декабря - Адаптивный дизайн</h6>
+                                                <h4 class="timeline__title">1 декабря - Адаптивный дизайн</h4>
                                                 <p class="timeline__description">Изучаю медиа-запросы и адаптивную верстку для мобильных устройств</p>
                                             </div>
                                             <div class="timeline__status">
@@ -114,7 +114,7 @@
                         <div class="content-grid__right">
                             <div class="card">
                                 <div class="card__header">
-                                    <h5 class="card__title">Текущие курсы</h5>
+                                    <h3 class="card__title">Текущие курсы</h3>
                                 </div>
                                 <div class="card__body">
                                     <div class="progress-item">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
             </main>
-            <div class="modal fade" id="addEntryModal" tabindex="-1" aria-labelledby="addEntryModalLabel" aria-hidden="true">
+            <div class="modal fade" id="addEntryModal" tabindex="-1" aria-labelledby="addEntryModalLabel" aria-describedby="addEntryForm" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">

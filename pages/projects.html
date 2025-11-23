@@ -6,41 +6,41 @@
         <title>Проекты</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="..//style/styles.css">
+        <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body class="page">
         <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
         <div class="page__container">
-             <header class="header">
+            <header class="header">
                 <div class="container header__container"> 
                     <img src="../images/logo.png" alt="Логотип" class="header__logo">
                     <div class="header__content">
-                        <h1 class="header__title"></h1>
+                        <p class="header__title">Колдаев Тимур Саврович</p>
                         <p class="header__subtitle">Студент разработчик</p>
                     </div>
                 </div>
             </header>
-            <nav class="nav">
+            <nav class="nav" aria-label="Основная навигация">
                 <div class="container nav__container">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a class="nav__link" href="../index.html">
-                                <i class="bi bi-house nav__icon"></i>Главная
+                                <i class="bi bi-house nav__icon" aria-hidden="true"></i>Главная
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link nav__link--active" href="projects.html">
-                                <i class="bi bi-folder nav__icon"></i>Проекты
+                            <a class="nav__link nav__link--active" href="projects.html" aria-current="page">
+                                <i class="bi bi-folder nav__icon" aria-hidden="true"></i>Проекты
                             </a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="diary.html">
-                                <i class="bi bi-journal nav__icon"></i>Дневник
+                                <i class="bi bi-journal nav__icon" aria-hidden="true"></i>Дневник
                             </a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="contacts.html">
-                                <i class="bi bi-telephone nav__icon"></i>Контакты
+                                <i class="bi bi-telephone nav__icon" aria-hidden="true"></i>Контакты
                             </a>
                         </li>
                     </ul>
@@ -54,76 +54,109 @@
                     </div>
                     <div class="projects-filter">
                         <div class="btn-group" role="group" aria-label="Фильтр проектов">
-                            <button type="button" class="btn btn--filter active" data-filter="all">Все</button>
-                            <button type="button" class="btn btn--filter" data-filter="html">HTML/CSS</button>
-                            <button type="button" class="btn btn--filter" data-filter="js">JavaScript</button>
-                            <button type="button" class="btn btn--filter" data-filter="react">React</button>
-                            <button type="button" class="btn btn--filter" data-filter="bootstrap">Bootstrap</button>
+                            <button type="button" class="btn btn--filter active" aria-pressed="true" aria-describedby="filter-description" data-filter="all">Все</button>
+                            <button type="button" class="btn btn--filter" aria-pressed="false" data-filter="html">HTML/CSS</button>
+                            <button type="button" class="btn btn--filter" aria-pressed="false" data-filter="js">JavaScript</button>
+                            <button type="button" class="btn btn--filter" aria-pressed="false" data-filter="react">React</button>
+                            <button type="button" class="btn btn--filter" aria-pressed="false" data-filter="bootstrap">Bootstrap</button>
+                            <p id="filter-description" class="sr-only">Выберите категорию фильтрации проектов</p>
                         </div>
                     </div>
-                    <div class="projects-grid" id="projectsGrid">
+                    <div class="projects-grid" id="projectsGrid" aria-live="polite" aria-atomic="true">
                         <div class="project-card" data-category="html bootstrap">
                             <div class="project-card__image-container">
-                                <img src="../images/project1.jpg" alt="Личный сайт" class="project-card__image">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project1-2000.webp">
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project1-2000.jpg">
+                                    <img src="../images/project1.jpg"
+                                        alt="Личный сайт"
+                                        class="project-card__image">
+                                </picture>
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title">Личный сайт</h3>
+                                <h2 class="project-card__title">Личный сайт</h2>
                                 <p class="project-card__description">Персональный веб-сайт с информацией обо мне и моих увлечениях</p>
                                 <div class="project-card__tags">
                                     <span class="project-card__tag">HTML</span>
                                     <span class="project-card__tag">CSS</span>
                                     <span class="project-card__tag">Bootstrap</span>
                                 </div>
-                                <button class="btn btn--primary project-card__button" data-project="1">
+                                <button class="btn btn--primary project-card__button" data-project="1" aria-label="Подробнее о личном сайте">
                                     Подробнее
                                 </button>
                             </div>
                         </div>
                         <div class="project-card" data-category="js">
                             <div class="project-card__image-container">
-                                <img src="../images/project2.jpg" alt="Todo приложение" class="project-card__image">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project2.webp">
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project2.jpg">
+                                    <img src="../images/project2-625.jpg"
+                                        alt="Todo приложение"
+                                        class="project-card__image">
+                                </picture>
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title">Todo приложение</h3>
+                                <h2 class="project-card__title">Todo приложение</h2>
                                 <p class="project-card__description">Приложение для управлением задачами с возможностью добавления,удаления и отметки выполненных</p>
                                 <div class="project-card__tags">
                                     <span class="project-card__tag">JavaScript</span>
                                     <span class="project-card__tag">LocalStorage</span>
                                 </div>
-                                <button class="btn btn--primary project-card__button" data-project="2">
+                                <button class="btn btn--primary project-card__button" data-project="2" aria-label="Подробнее о Todo приложении">
                                     Подробнее
                                 </button>
                             </div>
                         </div>
                         <div class="project-card" data-category="react">
                             <div class="project-card__image-container">
-                                <img src="../images/project3.jpg" alt="Интернет-магазин" class="project-card__image">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project3.webp">
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project3.jpg">
+                                    <img src="../images/project3-967.jpg"
+                                        alt="Интернет-магазин"
+                                        class="project-card__image">
+                                </picture>
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title">Интернет-магазин</h3>
+                                <h2 class="project-card__title">Интернет-магазин</h2>
                                 <p class="project-card__description">Полнофункциональный интернет-магазин с корзиной покупок и системой заказов</p>
                                 <div class="project-card__tags">
                                     <span class="project-card__tag">React</span>
                                     <span class="project-card__tag">API</span>
                                 </div>
-                                <button class="btn btn--primary project-card__button" data-project="3">
+                                <button class="btn btn--primary project-card__button" data-project="3" aria-label="Подробнее об интернет-магазине">
                                     Подробнее
                                 </button>
                             </div>
                         </div>
-                        <div class="project-card" data-category="bootstrap">
+                        <div class="project-card" data-category="bootstrap html">
                             <div class="project-card__image-container">
-                                <img src="../images/project4.jpg" alt="Портфолио" class="project-card__image">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project4-2000.webp">
+                                    <source media="(min-width: 1200px)"
+                                        srcset="../images/project4-2000.jpg">
+                                    <img src="../images/project4.jpg"
+                                        alt="Портфолио"
+                                        class="project-card__image">
+                                </picture>
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title">Портфолио</h3>
+                                <h2 class="project-card__title">Портфолио</h2>
                                 <p class="project-card__description">Адаптивный сайт-портфолио с использованием Bootstrap для демонстрации проектов.</p>
                                 <div class="project-card__tags">
                                     <span class="project-card__tag">Bootstrap</span>
                                     <span class="project-card__tag">HTML</span>
                                     <span class="project-card__tag">CSS</span>
                                 </div>
-                                <button class="btn btn--primary project-card__button" data-project="4">
+                                <button class="btn btn--primary project-card__button" data-project="4" aria-label="Подробнее о сайте-портфолио">
                                     Подробнее
                                 </button>
                             </div>
@@ -137,7 +170,8 @@
                     <a href="contacts.html" class="footer__link">Контакты</a>
                 </div>
             </footer>
-            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        </div>
+        <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-describedby="modalDescription" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -216,7 +250,7 @@
                         "Контактная форма с валидацией"
                     ],
                     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-                    images: ["../images/project1.jpg"],
+                    images: ["../images/project1.jpg", "../images/project1-2000.jpg"],
                     liveLink: "https://w055-dev.github.io/base-project/",
                     codeLink: "https://github.com/w055-dev/base-project",
                     status: "В разработке",
@@ -234,7 +268,7 @@
                         "Локальное сохранение данных"
                     ],
                     technologies: ["JavaScript", "LocalStorage", "HTML", "CSS"],
-                    images: ["../images/project2.jpg"],
+                    images: ["../images/project2-625.jpg", "../images/project2.jpg"],
                     liveLink: "#",
                     codeLink: "#",
                     status: "В разработке",
@@ -252,7 +286,7 @@
                         "Адаптивный интерфейс"
                     ],
                     technologies: ["React", "JavaScript", "CSS", "API"],
-                    images: ["../images/project3.jpg"],
+                    images: ["../images/project3-967.jpg", "../images/project3.jpg"],
                     liveLink: "#",
                     codeLink: "#",
                     status: "В разработке",
@@ -270,7 +304,7 @@
                         "Оптимизация для SEO"
                     ],
                     technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
-                    images: ["../images/project4.jpg"],
+                    images: ["../images/project4.jpg", "../images/project4.jpg"],
                     liveLink: "https://w055-dev.github.io/frontend-and-backend-practice/",
                     codeLink: "https://github.com/w055-dev/frontend-and-backend-practice",
                     status: "Завершен",
@@ -279,16 +313,20 @@
                 }
             };
             document.addEventListener('DOMContentLoaded', function() {
-                // Фильтрация проектов
                 const filterButtons = document.querySelectorAll('.btn--filter');
                 const projectCards = document.querySelectorAll('.project-card');
                 filterButtons.forEach(button => {
                     button.addEventListener('click', function() {
                         const filter = this.getAttribute('data-filter');
-                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        filterButtons.forEach(btn => {
+                            btn.classList.remove('active');
+                            btn.setAttribute('aria-pressed', 'false');
+                                });
                         this.classList.add('active');
+                        this.setAttribute('aria-pressed','true');
                         projectCards.forEach(card => {
-                            if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                            const categories = card.getAttribute('data-category');
+                            if (filter === 'all' || categories.includes(filter)) {
                                 card.style.display = 'block';
                             } else {
                                 card.style.display = 'none';
@@ -326,7 +364,7 @@
                                 const item = document.createElement('div');
                                 item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
                                 item.innerHTML = `
-                                    <img src="${image}" class="d-block w-100" alt="Скриншот проекта ${project.title}">
+                                    <img src="${image}" class="d-block w-100" alt="Скриншот проекта ${project.title}" loading="lazy">
                                 `;
                                 carouselInner.appendChild(item);
                             });

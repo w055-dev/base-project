@@ -13,34 +13,34 @@
         <div class="page__container">
             <header class="header">
                 <div class="container header__container"> 
-                    <img src="images/logo.webp" alt="Логотип" class="header__logo">
+                    <img src="images/logo.png" alt="Логотип" class="header__logo">
                     <div class="header__content">
-                        <h1 class="header__title">КТС</h1>
+                        <p class="header__title">Колдаев Тимур Саврович</p>
                         <p class="header__subtitle">Студент разработчик</p>
                     </div>
                 </div>
             </header>
-            <nav class="nav">
+            <nav class="nav" aria-label="Основная навигация">
                 <div class="container nav__container">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__link nav__link--active" href="index.html">
-                                <i class="bi bi-house nav__icon"></i>Главная
+                            <a class="nav__link nav__link--active" href="index.html" aria-current="page">
+                                <i class="bi bi-house nav__icon" aria-hidden="true"></i>Главная
                             </a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="pages/projects.html">
-                                <i class="bi bi-folder nav__icon"></i>Проекты
+                                <i class="bi bi-folder nav__icon" aria-hidden="true"></i>Проекты
                             </a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="pages/diary.html">
-                                <i class="bi bi-journal nav__icon"></i>Дневник
+                                <i class="bi bi-journal nav__icon" aria-hidden="true"></i>Дневник
                             </a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="pages/contacts.html">
-                                <i class="bi bi-telephone nav__icon"></i>Контакты
+                                <i class="bi bi-telephone nav__icon" aria-hidden="true"></i>Контакты
                             </a>
                         </li>
                     </ul>
@@ -50,10 +50,10 @@
                 <section class="hero hero--bleed" aria-labelledby="hero-title">
                     <div class="container hero__container">
                         <div class="hero__content">
-                            <h1 id="hero-title" class="hero__greeting">Привет! Я студент-разработчик</h1>
+                            <p id="hero-title" class="hero__greeting">Здравствуйте! Я студент-разработчик</p>
                             <p class="hero__description">
-                                Увлекаюсь веб-разработкой и изучаю современные технологии.
-                                Шаг за шагом приближаюсь к своей мечте стать профессиональным разработчиком.
+                                Учусь создавать интуитивные и функциональные веб-приложения.
+                                Каждый проект — это новый вызов и возможность для роста.
                             </p>
                             <a href="#main-content" class="btn btn--primary hero__button">
                                 <i class="bi bi-person hero__button-icon" aria-hidden="true"></i>Узнать больше
@@ -102,7 +102,7 @@
                                         </picture>
                                     </figure>
                                     <div class="profile__content">
-                                        <h2 class="profile__title">Привет! Я студент группы</h2>
+                                        <h2 class="profile__title">Привет! Я студент группы ЭФБО-02-24</h2>
                                         <p class="profile__description">
                                             Увлекаюсь веб-разработкой и изучаю современные технологии.
                                             Шаг за шагом приближаюсь к своей мечте.
@@ -179,7 +179,15 @@
                                 <div class="projects-grid">
                                     <article class="project-card">
                                         <div class="project-card__image-container">
-                                            <img src="images/project1.jpg" alt="Личный сайт" class="project-card__image">
+                                            <picture>
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project1-2000.webp">
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project1-2000.jpg">
+                                                <img src="images/project1.jpg"
+                                                     alt="Личный сайт"
+                                                     class="project-card__image">
+                                            </picture>
                                         </div>
                                         <div class="project-card__content">
                                             <h3 class="project-card__title">Личный сайт</h3>
@@ -193,7 +201,15 @@
                                     </article>
                                     <article class="project-card">
                                         <div class="project-card__image-container">
-                                            <img src="images/project2.jpg" alt="Todo приложение" class="project-card__image">
+                                            <picture>
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project2.webp">
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project2.jpg">
+                                                <img src="images/project2-625.jpg"
+                                                     alt="Todo приложение"
+                                                     class="project-card__image">
+                                            </picture>
                                         </div>
                                         <div class="project-card__content">
                                             <h3 class="project-card__title">Todo приложение</h3>
@@ -206,7 +222,15 @@
                                     </article>
                                     <article class="project-card">
                                         <div class="project-card__image-container">
-                                            <img src="images/project3.jpg" alt="Интернет-магазин" class="project-card__image">
+                                            <picture>
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project3.webp">
+                                                <source media="(min-width: 1200px)"
+                                                    srcset="images/project3.jpg">
+                                                <img src="images/project3-967.jpg"
+                                                     alt="Интернет-магазин"
+                                                     class="project-card__image">
+                                            </picture>
                                         </div>
                                         <div class="project-card__content">
                                             <h3 class="project-card__title">Интернет-магазин</h3>
