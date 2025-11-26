@@ -1007,7 +1007,7 @@ a,button,input,textarea{
 
 .contact-info__value{
     display: block;
-    color: var(--color-text-light);
+    color: var(--color-text-primary);
     font-size: var(--font-size-sm);
 }
 
